@@ -1,0 +1,305 @@
+/* ─── Variables ─────────────────────────────────────── */
+:root {
+  --green:    #4f6e57;
+  --green-dk: #3a5241;
+  --cream:    #e8ddd0;
+  --ink:      #2a2a2a;
+  --muted:    #7a7772;
+  --rule:     #ddd9d2;
+  --max-w:    640px;
+}
+
+/* ─── Reset ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* ─── Base ───────────────────────────────────────────── */
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: 'IM Fell English', Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+}
+
+/* ─── Links ──────────────────────────────────────────── */
+a {
+  color: var(--green);
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease;
+}
+a:hover {
+  text-decoration-color: var(--green);
+}
+
+a.underlined,
+.section-sub a {
+  text-decoration-color: var(--green);
+}
+
+/* ─── Top Nav ────────────────────────────────────────── */
+.top-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  padding: 1.25rem 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+.top-nav a {
+  color: var(--muted);
+  font-style: italic;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.top-nav a:hover {
+  color: var(--green);
+}
+
+.top-nav span { color: var(--rule); }
+
+/* ─── Header ─────────────────────────────────────────── */
+header {
+  text-align: center;
+  padding: 2rem 0 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.logo-link {
+  display: inline-block;
+}
+
+.logo {
+  display: block;
+  width: 320px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* ─── Profile Photo ──────────────────────────────────── */
+.profile-photo {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 2rem auto 0;
+}
+
+/* ─── Heading Link ───────────────────────────────────── */
+a.heading-link {
+  color: var(--green);
+  text-decoration: none;
+}
+a.heading-link:hover {
+  text-decoration: none;
+}
+
+/* ─── Header Intro ───────────────────────────────────── */
+.intro {
+  margin-top: 2rem;
+}
+
+.intro-aloha {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--green);
+}
+
+.intro-text {
+  font-size: 1rem;
+  color: var(--ink);
+  line-height: 1.75;
+  text-align: justify;
+  overflow: hidden;
+}
+
+/* ─── Sections ───────────────────────────────────────── */
+section {
+  margin-bottom: 3.5rem;
+}
+
+h2 {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: clamp(1.6rem, 5vw, 2rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--green);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.section-intro {
+  font-size: 1rem;
+  color: var(--ink);
+  line-height: 1.75;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+}
+
+/* ─── Section Photo ──────────────────────────────────── */
+.section-photo {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: 1.5rem auto;
+}
+
+.section-photo--large {
+  width: 75%;
+}
+
+/* ─── Subsection Heading ─────────────────────────────── */
+.subsection-heading {
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--green);
+  margin: 2rem 0 0.5rem;
+}
+
+/* ─── Section Sub ────────────────────────────────────── */
+.section-sub {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.7;
+  font-style: italic;
+  text-align: justify;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ─── Work Lists ─────────────────────────────────────── */
+.work-list {
+  list-style: none;
+}
+
+.work-list li {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.work-list li:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+.item-title a {
+  font-weight: 600;
+  font-size: 0.975rem;
+  text-decoration: none;
+}
+.item-title a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--green);
+}
+
+.item-meta {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 0.1rem;
+}
+
+/* ─── Friend Link List ───────────────────────────────── */
+.link-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 1rem;
+}
+
+.link-list a {
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ─── Ornamental divider ─────────────────────────────── */
+.ornament {
+  text-align: center;
+  color: var(--rule);
+  font-size: 0.9rem;
+  margin: 0 0 3.5rem;
+  letter-spacing: 0.1em;
+}
+
+/* ─── Centered Link ──────────────────────────────────── */
+.centered-link {
+  text-align: center;
+  margin: 1rem 0;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.centered-link a {
+  text-decoration-color: var(--green);
+}
+
+/* ─── Archive List ───────────────────────────────────── */
+.archive-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.archive-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.archive-list li:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+.archive-month {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.88rem;
+  min-width: 2.5rem;
+  flex-shrink: 0;
+}
+
+.archive-list a {
+  font-size: 1rem;
+  text-decoration-color: var(--green);
+}
+
+/* ─── Footer ─────────────────────────────────────────── */
+footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+footer a {
+  color: var(--muted);
+}
+footer a:hover {
+  color: var(--green);
+}
+
+/* ─── Responsive ─────────────────────────────────────── */
+@media (max-width: 480px) {
+  body { padding: 0 1.25rem 4rem; }
+  header { padding: 1.5rem 0 2rem; }
+  .logo { width: 80%; max-width: 260px; }
+  .profile-photo { width: 100%; max-width: 100%; }
+  .section-photo { width: 80%; }
+  .section-photo--large { width: 95%; }
+}
